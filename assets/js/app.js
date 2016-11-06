@@ -1,4 +1,4 @@
-var _app;
+var app;
 
 
 class Application{
@@ -13,4 +13,4 @@ class Application{
 
 }
 
-_app = new Application();
+app = new Application();

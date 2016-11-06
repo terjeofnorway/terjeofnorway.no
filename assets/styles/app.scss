@@ -1,8 +1,8 @@
-@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
-@import "../bower_components/neat/app/assets/stylesheets/neat";
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../bower_components/neat/app/assets/stylesheets/neat';
 
 body {
-  background-color: #ff0000;
-  opacity:0.5;
   @include margin(10px);
+  @include padding(10px);
+  opacity: .5;
 }
