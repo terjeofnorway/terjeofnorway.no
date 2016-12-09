@@ -5,7 +5,8 @@
     "comma-dangle": 2,
     "no-console": 0,
     "no-undef":0,
-    "no-unused-vars": [1, { "vars": "local" }]
+    "no-unused-vars": [1, { "vars": "local" }],
+    "semi": ["error","always"]
   },
   "env": {
     "es6": true

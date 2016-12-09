@@ -1,8 +1,14 @@
-@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import '../bower_components/neat/app/assets/stylesheets/neat';
+@import 'bourbon';
+@import 'neat';
+
+@import 'globals/variables';
+@import 'components/header';
 
 body {
   @include margin(10px);
   @include padding(10px);
   opacity: .5;
+  div {
+    background-color:$green;
+  }
 }
