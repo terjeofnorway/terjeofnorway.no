@@ -3,12 +3,6 @@
 
 @import 'globals/variables';
 @import 'components/header';
+@import 'layout/base';
 
-body {
-  @include margin(10px);
-  @include padding(10px);
-  opacity: .5;
-  div {
-    background-color:$green;
-  }
-}
+

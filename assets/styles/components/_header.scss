@@ -1,4 +1,11 @@
 nav {
   @include outer-container;
-  background-color: $green;
+
+  ul {
+    li {
+      float:left;
+      padding:1rem;
+    }
+
+  }
 }
