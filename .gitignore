@@ -2,4 +2,5 @@ public/**
 .idea/**
 craft/app
 craft/storage
+craft/plugins
 node_modules
