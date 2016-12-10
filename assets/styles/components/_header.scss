@@ -1,11 +1,35 @@
-nav {
-  @include outer-container;
+.container {
+  header {
+    @include outer-container();
+    //display: flex;
+    //justify-content: center;
 
-  ul {
-    li {
-      float:left;
-      padding:1rem;
+    .brand {
+      display: flex;
+      justify-content: center;
+      @include outer-container();
+      font-size:$font-size-logo;
     }
 
+    nav {
+      @include outer-container();
+
+
+      ul {
+        display:flex;
+        justify-content: center;
+
+        li {
+
+          padding:1rem;
+          list-style: none;
+          text-transform: uppercase;
+          a:link, a:visited, a:hover {
+            text-decoration: none;
+
+          }
+        }
+      }
+    }
   }
 }

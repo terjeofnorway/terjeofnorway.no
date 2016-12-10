@@ -1,4 +1,25 @@
+
+
+div, a, p{
+  transition: color 1s, background-color 1s;
+
+}
+
+
 body {
   background-color: $background-black;
   color: $text-color;
+
+  .container {
+    @include outer-container(12);
+  }
+}
+
+
+a:link, a:visited{
+  color:$text-color;
+
+  &:hover {
+    color:$text-color * .8;
+  }
 }

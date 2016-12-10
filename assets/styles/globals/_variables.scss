@@ -1,7 +1,10 @@
 
 $font-family: 'Arial';
 $font-size:   12pt;
+$font-size-logo:  40pt;
 
+
+$max-width: 1200px !default;
 
 $primary-color:     #333333;
 $secondary-color:   #ffff44;
@@ -10,6 +13,5 @@ $tertiary-color:    #dddddd;
 
 $background-black:  $primary-color;
 $text-color:        $tertiary-color;
-
 
 

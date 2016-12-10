@@ -23,7 +23,7 @@
     "preuglify": "mkdirp public/dist/scripts",
     "uglify": "babel assets/scripts/ | uglifyjs -m -o public/dist/scripts/app.js",
     "imagemin": "imagemin assets/images/* -o public/dist/images",
-    "serve": "browser-sync start --proxy terjeofnorway.dev --files \"public/dist/styles/*.css, public/dist/scripts/*.js, craft/templates/*.html\" --no-notify",
+    "serve": "browser-sync start --proxy terjeofnorway.dev --files \"public/dist/styles/*.css, public/dist/scripts/*.js, craft/templates/**/*.html\" --no-notify",
     "watch:sass": "onchange 'assets/styles/**/*.scss' -- npm run build:sass",
     "watch:js": "onchange 'assets/scripts/**/*.js' -- npm run build:js",
     "watch:images": "onchange 'assets/images/*' -- npm run build:images",
