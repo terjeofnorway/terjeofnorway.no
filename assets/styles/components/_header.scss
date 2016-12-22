@@ -24,9 +24,22 @@
           padding:1rem;
           list-style: none;
           text-transform: uppercase;
-          background-color: $primary-color * .8;
+          background-color: $menu-item-background-color;
+
           a:link, a:visited, a:hover {
             text-decoration: none;
+          }
+
+          &.fiddles {
+
+          }
+
+          &.about {
+
+          }
+
+          &.github {
+
           }
 
         }
