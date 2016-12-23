@@ -7,7 +7,13 @@
       display: flex;
       justify-content: center;
       @include outer-container();
-      font-size:$font-size-logo;
+      font-size:$font-size * 1.5;
+
+      margin:3rem 0;
+
+      a:link, a:visited, a:hover {
+        text-decoration: none;
+      }
     }
 
 
@@ -21,26 +27,34 @@
 
         li {
 
-          padding:1rem;
+          padding:1rem 1rem 1rem 4rem;
           list-style: none;
-          text-transform: uppercase;
-          background-color: $menu-item-background-color;
 
-          a:link, a:visited, a:hover {
-            text-decoration: none;
-          }
+          background-color: $menu-item-background-color;
+          background-repeat: no-repeat;
+          background-position: 0.7em;
+
 
           &.fiddles {
-
+            background-image: url('../images/ui/icon-tools.svg');
           }
 
           &.about {
-
+            background-image: url('../images/ui/icon-face.svg');
           }
 
           &.github {
-
+            background-image: url('../images/ui/icon-git.svg');
           }
+
+          a:link, a:visited, a:hover {
+            text-decoration: none;
+            color:$black;
+            text-transform:none;
+
+            transition: color 1s, background-color 1s;
+          }
+
 
         }
       }
