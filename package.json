@@ -22,7 +22,7 @@
     "lint": "eslint assets/scripts",
     "preuglify": "mkdirp public/dist/scripts",
     "uglify": "babel assets/scripts/ | uglifyjs -m -o public/dist/scripts/app.js",
-    "imagemin": "imagemin assets/images/* -o public/dist/images",
+    "imagecopy": "copyfiles --up 2 assets/images/**/* assets/images/* public/dist/images",
     "serve": "browser-sync start --proxy terjeofnorway.dev --files \"public/dist/styles/*.css, public/dist/scripts/*.js, craft/templates/**/*.html\" --no-notify",
     "watch:sass": "onchange 'assets/styles/**/*.scss' -- npm run build:sass",
     "watch:js": "onchange 'assets/scripts/**/*.js' -- npm run build:js",
@@ -32,7 +32,7 @@
     "test": "karma start",
     "build:sass": "npm run scss",
     "build:js": "npm run lint && npm run uglify",
-    "build:images": "npm run imagemin",
+    "build:images": "npm run imagecopy",
     "build:all": "npm run build:sass && npm run build:js && npm run build:images",
     "build": "npm run build:all"
   },
@@ -48,7 +48,6 @@
     "eslint-plugin-standard": "^1.3.2",
     "html-minifier": "^3.2.3",
     "html-minifier-cli": "^0.1.0",
-    "imagemin-cli": "^3.0.0",
     "jasmine": "^2.5.2",
     "jasmine-core": "^2.5.2",
     "karma": "^1.3.0",
@@ -70,6 +69,7 @@
   "dependencies": {
     "bourbon": "^4.2.7",
     "bourbon-neat": "^1.8.0",
+    "copyfiles": "^1.0.0",
     "cssnano": "^3.8.2",
     "mocha": "^3.2.0"
   }
