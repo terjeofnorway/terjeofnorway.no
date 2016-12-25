@@ -1,0 +1,10 @@
+footer {
+  @include outer-container();
+  @include pad(3em 2em);
+
+  margin-top:2em;
+
+  background-color:$blue-dark;
+  text-align:center;
+
+}
