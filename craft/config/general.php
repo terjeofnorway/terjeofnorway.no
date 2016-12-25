@@ -22,6 +22,7 @@ if(isset($_SERVER['HTTPS'])){
 
 define('SITE_URL', 'http://' . $_SERVER['SERVER_NAME']);
 
+
 define('INSTALLATION_PATH', realpath(dirname(__FILE__) . '/../'));
 define('RESOURCES_PATH', realpath(dirname(__FILE__) . '/../../resources/'));
 

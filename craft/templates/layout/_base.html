@@ -15,7 +15,7 @@
 	<meta charset="utf-8" />
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
-	<link rel="stylesheet" href="dist/styles/app.css" />
+	<link rel="stylesheet" href="{{ siteUrl }}dist/styles/app.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 
@@ -38,6 +38,6 @@
 			{{ footer.body }}
 		</footer>
 	</div>
-	<script src="dist/scripts/app.js"></script>
+	<script src="{{ siteUrl }}dist/scripts/app.js"></script>
 </body>
 </html>

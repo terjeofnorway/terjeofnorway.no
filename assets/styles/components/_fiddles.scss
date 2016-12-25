@@ -5,17 +5,21 @@ main {
 
     .fiddle {
       @include outer-container();
+      margin:3em 0;
 
       h2 {
         @include span-columns(12);
+        color:$green;
       }
 
       img {
         @include span-columns(3);
+        @include pad(1em 2em 1em 0);
       }
 
       p {
         @include span-columns(5);
+        @include pad(1em 0 0 0);
       }
 
       .link {
@@ -24,6 +28,7 @@ main {
 
         a {
           @include outboundlink();
+          margin:3em 0;
         }
 
       }
