@@ -1,4 +1,4 @@
-public/**
+public/dist
 .idea/**
 craft/app
 craft/storage
