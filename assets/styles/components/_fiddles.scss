@@ -10,21 +10,25 @@ main {
         @include span-columns(12);
       }
 
-
       img {
         @include span-columns(3);
       }
 
       p {
-        @include span-columns(6);
+        @include span-columns(5);
       }
 
-      a {
+      .link {
         @include span-columns(3);
+        @include shift(1);
+
+        a {
+          @include outboundlink();
+        }
+
       }
 
     }
-
 
   }
 }
