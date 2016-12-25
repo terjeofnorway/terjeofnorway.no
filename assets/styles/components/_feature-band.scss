@@ -1,0 +1,10 @@
+.feature {
+  @include outer-container();
+
+  background-color: $feature-background-color;
+  color: $feature-text-color;
+  padding:3rem;
+  font-size:1.3rem;
+  text-align:center;
+
+}

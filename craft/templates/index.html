@@ -20,9 +20,24 @@
 {% extends "layout/_base" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
+<div class="container">
+  <div class="row feature">
+     {{ entry.ingress }}
+  </div>
 
-	{{ entry.body }}
+ <div class="fiddles">
+  {% for item in craft.entries.section('fiddles') %}
+   <div class="fiddle">
+    <h2>{{ item.title }}</h2>
+    <img src="{{ item.image[0].url }}" />
+    <p>{{ item.ingress }}</p>
+    <a href="">Go see</a>
 
+   </div>
+
+  {% endfor %}
+ </div>
+
+</div>
 
 {% endblock %}

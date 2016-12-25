@@ -20,6 +20,8 @@
     nav {
       @include outer-container();
 
+      margin:3rem 0;
+
 
       ul {
         display:flex;
