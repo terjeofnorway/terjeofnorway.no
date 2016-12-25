@@ -4,18 +4,33 @@ $font-size:   12pt;
 
 
 
-$max-width: 1200px !default;
+// -----------------------------------
+// Padding and sizing
+// -----------------------------------
+$max-width:                   1200px !default;
+$global-content-padding:      0 2em;
 
-$black:  #333333;
-$main-background-color:   #2E354D;
-$tertiary-color:    #dddddd;
 
 
-$menu-item-background-color:  #ADB47E;
+// -----------------------------------
+// Colors
+// -----------------------------------
 
-$feature-background-color:    #282D42;
-$feature-text-color:          #ADB47E;
+// General color definitions
+//
+$black:                       #333333;
+$white:                       #eeeeee;
+$green:                       #ADB47E;
+$blue:                        #2E354D;
+$blue-dark:                   #282D42;
 
-$text-color:                  $tertiary-color;
+// Component and element specific definitions
+$main-background-color:       $blue;
+$menu-item-background-color:  $green;
+
+$feature-background-color:    $blue-dark;
+$feature-text-color:          $green;
+
+$text-color:                  $white;
 
 

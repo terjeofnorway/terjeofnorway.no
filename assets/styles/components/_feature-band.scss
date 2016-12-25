@@ -1,5 +1,6 @@
 .feature {
-  @include outer-container();
+  @include outer-container(100%);
+
 
   background-color: $feature-background-color;
   color: $feature-text-color;

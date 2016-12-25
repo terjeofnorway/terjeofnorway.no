@@ -1,12 +1,12 @@
 .container {
   header {
     @include outer-container();
+    @include pad($global-content-padding);
 
 
     .brand {
       display: flex;
       justify-content: center;
-      @include outer-container();
       font-size:$font-size * 1.5;
 
       margin:3rem 0;
@@ -26,6 +26,7 @@
       ul {
         display:flex;
         justify-content: space-between;
+        padding:0;
 
         li {
 

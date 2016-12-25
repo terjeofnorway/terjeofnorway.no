@@ -1,11 +1,30 @@
-.fiddles {
-  @include outer-container();
-
-  .fiddle {
+main {
+  .fiddles {
     @include outer-container();
+    @include pad($global-content-padding);
+
+    .fiddle {
+      @include outer-container();
+
+      h2 {
+        @include span-columns(12);
+      }
+
+
+      img {
+        @include span-columns(3);
+      }
+
+      p {
+        @include span-columns(6);
+      }
+
+      a {
+        @include span-columns(3);
+      }
+
+    }
 
 
   }
-
-
 }

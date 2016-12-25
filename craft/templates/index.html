@@ -20,11 +20,11 @@
 {% extends "layout/_base" %}
 
 {% block content %}
-<div class="container">
   <div class="row feature">
      {{ entry.ingress }}
   </div>
 
+<div class="container">
  <div class="fiddles">
   {% for item in craft.entries.section('fiddles') %}
    <div class="fiddle">
