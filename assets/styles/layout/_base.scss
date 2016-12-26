@@ -2,7 +2,7 @@
 
 div, a, p{
   font-family: $font-family;
-
+  font-size: rem($base-font-size);
 }
 
 
@@ -10,6 +10,7 @@ body {
   background-color: $main-background-color;
   margin:0;
   color: $text-color;
+  font-size:rem($base-font-size);
 
   .container {
     @include outer-container(12);

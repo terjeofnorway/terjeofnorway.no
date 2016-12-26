@@ -16,9 +16,16 @@
 {% extends "layout/_base" %}
 
 {% block content %}
-	<article>
+	<article class="fiddle-entry">
 		<h1>{{ entry.title }}</h1>
-		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-		{{ entry.body }}
+		<img src="{{ entry.image[0].url }}" />
+        <div class="content-wrapper">
+            <div class="content">{{ entry.body }}</div>
+            <div class="links">
+                <a href="#" class="demo">Open demo</a>
+                <a href="#" class="git">Git</a>
+
+            </div>
+        </div>
 	</article>
 {% endblock %}

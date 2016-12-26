@@ -7,12 +7,12 @@
     .brand {
       display: flex;
       justify-content: center;
-      font-size:$font-size * 1.5;
 
       margin:3rem 0;
 
       a:link, a:visited, a:hover {
         text-decoration: none;
+        font-size: rem($base-font-size*3);
       }
     }
 
@@ -36,6 +36,10 @@
           background-color: $menu-item-background-color;
           background-repeat: no-repeat;
           background-position: 0.7em;
+
+          @include media($mobile){
+            display:none;
+          }
 
 
           &.fiddles {

@@ -1,5 +1,5 @@
 main {
-  .fiddles {
+  .fiddle-listing {
     @include outer-container();
     @include pad($global-content-padding);
 
@@ -13,18 +13,38 @@ main {
       }
 
       img {
-        @include span-columns(3);
+        @include media($mobile){
+          @include span-columns(4 of 4);
+          display:none;
+        }
+
+        @include media($tablet){
+          @include span-columns(3);
+        }
         @include pad(1em 2em 1em 0);
       }
 
       p {
-        @include span-columns(5);
+        @include media($mobile){
+          @include span-columns(3);
+        }
+
+        @include media($tablet){
+          @include span-columns(3);
+        }
+
         @include pad(1em 0 0 0);
       }
 
       .link {
-        @include span-columns(3);
-        @include shift(1);
+        @include media($mobile){
+          @include span-columns(1);
+        }
+
+        @include media($tablet){
+          @include span-columns(2);
+          @include shift(1);
+        }
 
         a {
           @include outboundlink();
@@ -34,6 +54,44 @@ main {
       }
 
     }
+  }
 
+
+
+  .fiddle-entry {
+    @include outer-container();
+
+    h1 {
+      @include span-columns(12);
+      text-align:center;
+      color: $green;
+      font-weight:normal;
+      font-size:1rem;
+    }
+
+    img {
+      @include span-columns(4);
+      @include shift(4);
+      @include pad(3em);
+    }
+
+    .content-wrapper {
+      @include span-columns(12);
+      @include pad($global-content-padding);
+
+      .content {
+        @include span-columns(8);
+
+      }
+
+      .links {
+        @include span-columns(4);
+
+        .demo, .git {
+          @include outboundlink();
+          display:table;
+        }
+      }
+    }
   }
 }

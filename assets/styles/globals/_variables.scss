@@ -1,6 +1,6 @@
 
 $font-family: 'Inconsolata', 'Courier New', serif;
-$font-size:   12pt;
+$base-font-size:   16;
 
 
 
@@ -9,6 +9,7 @@ $font-size:   12pt;
 // -----------------------------------
 $max-width:                   1200px !default;
 $global-content-padding:      0 2em;
+
 
 
 
@@ -34,3 +35,10 @@ $feature-text-color:          $green;
 $text-color:                  $white;
 
 
+// ------------------------------------
+// Breakpoints
+// ------------------------------------
+
+$mobile: new-breakpoint(min-width 0px 4);
+$tablet: new-breakpoint(min-width 920px 8);
+$desktop: new-breakpoint(min-width 1200px 12);
