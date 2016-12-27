@@ -25,7 +25,9 @@
 		<header id="header">
 			<div class="brand"><a href="{{ siteUrl }}">{{ siteName }}</a></div>
 
-			<nav>{{craft.olivemenus.getMenuHTML('mainMenu')}}</nav>
+			<nav>
+				<div class="mobile-toggle"><a href="#" class="toggle-button">MENU</a></div>
+					{{craft.olivemenus.getMenuHTML('mainMenu')}}</nav>
 
 		</header>
 

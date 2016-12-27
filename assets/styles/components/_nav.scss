@@ -1,0 +1,85 @@
+nav {
+  @include outer-container();
+
+  margin:3rem 0;
+
+  .mobile-toggle {
+    @include span-columns(12);
+
+    .toggle-button {
+      position: relative;
+      display:block;
+      float:right;
+      width: 2em;
+      height: 2em;
+      text-decoration: none;
+
+      &:after {
+        position:absolute;
+        width:40px;
+        height:40px;
+        top:25%;
+        left:40px;
+        content:'';
+        background-image: url('../images/ui/icon-menu-dropdown-arrow.svg');
+        background-repeat:no-repeat;
+
+      }
+    }
+  }
+
+
+  ul {
+    @include span-columns(12);
+
+    display:flex;
+    justify-content: space-between;
+    padding:0;
+
+    @include media($mobile){
+      flex-direction:column;
+    }
+    @include media($tablet){
+      flex-direction: row;
+    }
+
+    li {
+      @include pad(1em 1em 1em 4em);
+      list-style: none;
+
+      background-color: $menu-item-background-color;
+      background-repeat: no-repeat;
+      background-position: 0.7em;
+
+      @include media($mobile){
+        margin: 0.1em 0;
+      }
+      @include media($tablet){
+        margin:0;
+      }
+
+      &.fiddles {
+        background-image: url('../images/ui/icon-tools.svg');
+      }
+
+      &.about {
+        background-image: url('../images/ui/icon-face.svg');
+      }
+
+      &.github {
+        background-image: url('../images/ui/icon-git.svg');
+        background-position: 1em;
+      }
+
+      a:link, a:visited, a:hover {
+        text-decoration: none;
+        color:$black;
+        text-transform:none;
+
+        transition: color 1s, background-color 1s;
+      }
+
+
+    }
+  }
+}

@@ -14,11 +14,8 @@
 
   text-decoration: none;
   text-transform: uppercase;
-  border:$blue 1px solid;
 
   transition: border-color 1s;
 
-  &:hover {
-    border:$white 1px solid;
-  }
+
 }

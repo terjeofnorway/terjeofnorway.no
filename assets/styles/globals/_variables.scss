@@ -34,11 +34,12 @@ $feature-text-color:          $green;
 
 $text-color:                  $white;
 
-
 // ------------------------------------
-// Breakpoints
+// Breakpoints and grid
 // ------------------------------------
 
-$mobile: new-breakpoint(min-width 0px 4);
-$tablet: new-breakpoint(min-width 920px 8);
-$desktop: new-breakpoint(min-width 1200px 12);
+$grid-columns: 12;
+
+$mobile: new-breakpoint(min-width 0px $grid-columns);
+$tablet: new-breakpoint(min-width 920px $grid-columns);
+$desktop: new-breakpoint(min-width 1200px $grid-columns);

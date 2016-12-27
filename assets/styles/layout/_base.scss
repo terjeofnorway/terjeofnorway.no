@@ -5,6 +5,14 @@ div, a, p{
   font-size: rem($base-font-size);
 }
 
+h1 {
+  font-size: rem($base-font-size * 3);
+}
+
+h2 {
+  font-size: rem($base-font-size * 3);
+}
+
 
 body {
   background-color: $main-background-color;
