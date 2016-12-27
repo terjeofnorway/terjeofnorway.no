@@ -1,16 +1,13 @@
 
 
-var app;
-
+let app;
 
 class Application{
 
     constructor(){
-        var foo = "bar";
-        console.log('Application started! ' + foo);
-        var parallax = new Parallax();
-        console.log(parallax);
-
+        let navmenu = new Nav();
+        console.log(navmenu);
+        console.log('app run');
     }
 }
 

@@ -48,7 +48,7 @@ return array(
     ),
 
     'terjeofnorway.dev' => array(
-        'devMode' => true,
+        'devMode' => false,
     ),
 
     'terjeofnorway.no' => array(

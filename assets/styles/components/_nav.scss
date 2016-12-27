@@ -35,6 +35,13 @@ nav {
     display:flex;
     justify-content: space-between;
     padding:0;
+    height:auto;
+    overflow: hidden;
+    transition: height 0.5s;
+
+    &.collapsed {
+      height:0;
+    }
 
     @include media($mobile){
       flex-direction:column;
@@ -78,8 +85,6 @@ nav {
 
         transition: color 1s, background-color 1s;
       }
-
-
     }
   }
 }
