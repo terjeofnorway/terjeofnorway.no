@@ -1,4 +1,4 @@
-class Nav {
+class MobileNav {
 
 
     constructor(){
@@ -18,7 +18,12 @@ class Nav {
      * @return void
       */
     mobileMenuClickEventListener(){
-        let menu = document.getElementById('navigation').getElementByName('ul');
-        menu.hasClass('collapsed') == true ? menu.removeClass('collapsed') : menu.addClass('collapsed');
+        let menu = document.querySelector('.menu');
+        menu.classList.toggle('collapsed');
+
+        console.log('menu clicked');
     }
 }
+
+
+

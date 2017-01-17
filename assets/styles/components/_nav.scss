@@ -1,15 +1,25 @@
 nav {
   @include outer-container();
 
-  margin:3rem 0;
+  @include media($tablet){
+    margin:3rem 0;
+
+  }
 
   .mobile-toggle {
     @include span-columns(12);
+    display:flex;
+    justify-items:center;
+    justify-self: right;
+
+    @include media($tablet){
+      display:none;
+    }
 
     .toggle-button {
       position: relative;
-      display:block;
-      float:right;
+      display:flex;
+      margin-left:auto;
       width: 2em;
       height: 2em;
       text-decoration: none;
@@ -24,6 +34,64 @@ nav {
         background-image: url('../images/ui/icon-menu-dropdown-arrow.svg');
         background-repeat:no-repeat;
 
+      }
+    }
+  }
+
+
+  .menu {
+    display:block;
+    position: relative;
+    overflow:visible;
+
+    ul {
+      perspective: 1000px;
+      overflow:visible;
+      max-height:2000px;
+      transition: max-height 700ms cubic-bezier(.86,0,.07,1) 0s;
+
+      li {
+        transform: rotateX(0deg) translateZ(0px);
+        transition: transform .2s, opacity .2s;
+        opacity: 1;
+        transition-timing-function: ease-out;
+
+        &.fiddles {
+          transition-delay: .0s;
+        }
+        &.about {
+          transition-delay: .1s;
+        }
+        &.github {
+          transition-delay: .2s;
+        }
+      }
+    }
+
+
+    &.collapsed {
+
+      ul {
+        max-height:0px;
+
+        li {
+          opacity: 0;
+
+          &.fiddles {
+            transform: rotateX(90deg) translateZ(1em);
+            transition-delay: .2s;
+          }
+
+          &.about {
+            transform: rotateX(90deg) translateZ(5em);
+            transition-delay: .1s;
+          }
+
+          &.github {
+            transform: rotateX(90deg) translateZ(10em);
+            transition-delay: .0s;
+          }
+        }
       }
     }
   }

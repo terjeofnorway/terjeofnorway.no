@@ -21,7 +21,7 @@
     "postscss": "postcss --use autoprefixer -b 'last 2 versions' < public/dist/styles/app.css | postcss --use cssnano > public/dist/styles/app.min.css",
     "lint": "eslint assets/scripts",
     "preuglify": "mkdirp public/dist/scripts",
-    "uglify": "babel assets/scripts/ | uglifyjs -m -o public/dist/scripts/app.js",
+    "uglify": "babel assets/scripts/ | uglifyjs -b -o public/dist/scripts/app.js",
     "imagecopy": "copyfiles --up 2 assets/images/**/* assets/images/* public/dist/images",
     "serve": "browser-sync start --proxy terjeofnorway.dev --files \"public/dist/styles/*.css, public/dist/scripts/*.js, craft/templates/**/*.html\" --no-notify",
     "watch:sass": "onchange 'assets/styles/**/*.scss' -- npm run build:sass",
