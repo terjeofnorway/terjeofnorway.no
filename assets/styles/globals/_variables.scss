@@ -39,7 +39,9 @@ $text-color:                  $white;
 // ------------------------------------
 
 $grid-columns: 12;
+$max-width:1200px;
 
 $mobile: new-breakpoint(min-width 0px $grid-columns);
+$mobile-only: new-breakpoint(max-width 919px $grid-columns);
 $tablet: new-breakpoint(min-width 920px $grid-columns);
 $desktop: new-breakpoint(min-width 1200px $grid-columns);

@@ -19,7 +19,7 @@ class MobileNav {
       */
     mobileMenuClickEventListener(){
         let menu = document.querySelector('.menu');
-        menu.classList.toggle('collapsed');
+        menu.classList.toggle('mobile-collapsed');
 
         console.log('menu clicked');
     }

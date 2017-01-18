@@ -69,30 +69,34 @@ nav {
     }
 
 
-    &.collapsed {
+    &.mobile-collapsed {
 
-      ul {
-        max-height:0px;
+      @include media($mobile-only){
+        ul {
+          max-height:0px;
 
-        li {
-          opacity: 0;
+          li {
+            opacity: 0;
 
-          &.fiddles {
-            transform: rotateX(90deg) translateZ(1em);
-            transition-delay: .2s;
-          }
+            &.fiddles {
+              transform: rotateX(90deg) translateZ(1em);
+              transition-delay: .2s;
+            }
 
-          &.about {
-            transform: rotateX(90deg) translateZ(5em);
-            transition-delay: .1s;
-          }
+            &.about {
+              transform: rotateX(90deg) translateZ(5em);
+              transition-delay: .1s;
+            }
 
-          &.github {
-            transform: rotateX(90deg) translateZ(10em);
-            transition-delay: .0s;
+            &.github {
+              transform: rotateX(90deg) translateZ(10em);
+              transition-delay: .0s;
+            }
           }
         }
+
       }
+
     }
   }
 
@@ -116,21 +120,37 @@ nav {
     }
     @include media($tablet){
       flex-direction: row;
+      justify-content: center;
     }
 
     li {
       @include pad(1em 1em 1em 4em);
       list-style: none;
+      display: flex;
+      padding:0;
 
       background-color: $menu-item-background-color;
       background-repeat: no-repeat;
       background-position: 0.7em;
+      transition-property: transform, background-color;
+      transition-duration: 0.3s;
+
+      transform: scaleX(1) scaleY(1);
+      transform-style: preserve-3d;
+
+
+      &:hover {
+        transform: scaleX(1.1) scaleY(1.1);
+        background-color: $menu-item-background-color * .9;
+        transition-property: transform, background-color;
+        transition-duration: 0.3s;
+      }
 
       @include media($mobile){
         margin: 0.1em 0;
       }
       @include media($tablet){
-        margin:0;
+        margin:0 1em;
       }
 
       &.fiddles {
@@ -146,12 +166,13 @@ nav {
         background-position: 1em;
       }
 
-      a:link, a:visited, a:hover {
+      a.menu-title:link, a.menu-title:visited, a.menu-title:hover {
         text-decoration: none;
         color:$black;
         text-transform:none;
+        padding:1em 1em 1em 4em;
 
-        transition: color 1s, background-color 1s;
+        transition: color 1s;
       }
     }
   }
