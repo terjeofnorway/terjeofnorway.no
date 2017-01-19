@@ -27,14 +27,8 @@
 <div class="container">
  <div class="fiddle-listing">
   {% for item in craft.entries.section('fiddles') %}
-   <div class="fiddle">
-    <h2>{{ item.title }}</h2>
-    <img src="{{ item.image[0].url }}" />
-    <p>{{ item.ingress }}</p>
-    <div class="link">
-     <a href="{{ item.url }}">Go see</a>
-    </div>
-   </div>
+
+   {% include 'partials/_fiddle.html' %}
 
   {% endfor %}
  </div>

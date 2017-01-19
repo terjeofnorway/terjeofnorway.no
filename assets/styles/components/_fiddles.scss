@@ -5,32 +5,32 @@ main {
 
     .fiddle {
       @include row();
-      margin:3em 0;
-      cursor:pointer;
+      margin: 3em 0;
+      cursor: pointer;
 
       h2 {
-        color:$green;
+        color: $green;
 
-        @include media($mobile){
+        @include media($mobile) {
           @include span-columns(12);
           text-align: center;
         }
 
-        @include media($tablet){
+        @include media($tablet) {
           @include span-columns(8);
           @include shift(2);
-          text-align:left;
+          text-align: left;
         }
       }
 
       img {
-        @include media($mobile){
+        @include media($mobile) {
           @include span-columns(12);
           @include pad(0em 5em);
 
         }
 
-        @include media($tablet){
+        @include media($tablet) {
           @include span-columns(3);
           @include shift(2);
           @include pad(1em 3em 1em 0);
@@ -39,59 +39,54 @@ main {
       }
 
       p {
-        @include media($mobile){
+        @include media($mobile) {
           @include span-columns(12);
         }
 
-        @include media($tablet){
+        @include media($tablet) {
           @include span-columns(4);
         }
 
         @include pad(1em 0 0 0);
       }
 
-      .link {
-        @include media($mobile){
+      .go-see-cta {
+        @include media($mobile) {
           @include span-columns(12);
         }
 
-        @include media($tablet){
+        @include media($tablet) {
           @include span-columns(1);
           @include shift(1);
+          margin-top:3em;
         }
 
-        a {
-          @include outboundlink();
-          @include media($tablet){
-            margin:3em 0;
-          }
-        }
+        @include outboundlink();
+
 
       }
 
     }
   }
 
-
-
   .fiddle-entry {
     @include outer-container();
 
     h1 {
       @include span-columns(12);
-      text-align:center;
+      text-align: center;
       color: $green;
-      font-weight:normal;
-      font-size:rem($base-font-size*3);
+      font-weight: normal;
+      font-size: rem($base-font-size*3);
     }
 
     img {
-      @include media($mobile){
+      @include media($mobile) {
         @include span-columns(8);
         @include shift(2);
 
       }
-      @include media($tablet){
+      @include media($tablet) {
         @include shift(4);
         @include pad(3em);
 
@@ -109,17 +104,17 @@ main {
       }
 
       .links {
-        @include media($mobile){
+        @include media($mobile) {
           @include span-columns(12);
         }
 
-        @include media($tablet){
+        @include media($tablet) {
           @include span-columns(4);
         }
 
         .demo, .git {
           @include outboundlink();
-          display:table;
+          display: table;
         }
       }
     }

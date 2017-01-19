@@ -1,11 +1,11 @@
 @mixin outboundlink(){
   @include pad(.5em);
-  padding-right:2em;
+  padding-right:5em;
 
   background-repeat: no-repeat;
   background-image: url('../images/ui/icon-arrow.svg');
   background-position: 80% 50%;
-  background-size:20% 20%;
+  background-size:.8em;
   white-space: nowrap;
 
   display:inline-block;
@@ -16,6 +16,4 @@
   text-transform: uppercase;
 
   transition: border-color 1s;
-
-
 }
