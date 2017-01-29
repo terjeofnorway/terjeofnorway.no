@@ -1,0 +1,18 @@
+main {
+
+  .about {
+    @include outer-container();
+    @include pad($global-content-padding);
+    @include row();
+
+    h1 {
+      @include span-columns(12);
+    }
+
+    .body {
+      @include span-columns(8);
+      @include shift(2);
+    }
+
+  }
+}

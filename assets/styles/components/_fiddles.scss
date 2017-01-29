@@ -9,7 +9,7 @@ main {
       cursor: pointer;
 
       h2 {
-        color: $green;
+        color: $white;
 
         @include media($mobile) {
           @include span-columns(12);
@@ -96,26 +96,52 @@ main {
     }
 
     .content-wrapper {
-      @include span-columns(12);
+
+      @include media($mobile){
+        @include span-columns(12);
+      }
+
+      @include media($tablet){
+        @include span-columns(10);
+        @include shift(1);
+      }
+
       @include pad($global-content-padding);
 
       .content {
-        @include span-columns(8);
+        @include media($mobile){
+          @include span-columns(12);
+          margin-top:2em;
+        }
+
+        @include media($tablet){
+          @include span-columns(8);
+        }
+
+        p {
+          margin: 0.5em 0;
+        }
 
       }
 
       .links {
+
         @include media($mobile) {
-          @include span-columns(12);
+          @include span-columns(6);
+          @include shift(6);
+
+          margin-top: 3em;
         }
 
         @include media($tablet) {
           @include span-columns(4);
+          padding:0em 2em;
+          margin:2em 0em;
         }
 
         .demo, .git {
           @include outboundlink();
-          display: table;
+          width:100%;
         }
       }
     }

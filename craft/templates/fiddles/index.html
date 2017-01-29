@@ -1,8 +1,16 @@
-
-
 {% extends "layout/_base" %}
 
 {% block content %}
-	<h1>Fiddles</h1>
+    <div class="container">
+        <h1>Fiddles</h1>
+        <div class="fiddle-listing">
+            {% for item in craft.entries.section('fiddles') %}
+
+            {% include 'partials/_frontpage-fiddle.html' %}
+
+            {% endfor %}
+        </div>
+
+    </div>
 
 {% endblock %}

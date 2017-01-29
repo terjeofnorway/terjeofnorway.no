@@ -1,5 +1,5 @@
 footer {
-  @include outer-container();
+  @include outer-container(100%);
   @include pad(3em 2em);
 
   margin-top:2em;
