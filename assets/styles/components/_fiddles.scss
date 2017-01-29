@@ -87,6 +87,7 @@ main {
 
       }
       @include media($tablet) {
+        @include span-columns(4);
         @include shift(4);
         @include pad(3em);
 
