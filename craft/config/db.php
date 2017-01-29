@@ -13,8 +13,24 @@ return array(
     '*' => array(
 
     ),
+    'terjeofnorway.no' => array (
+        // The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
+        'server' => 'localhost',
 
-    'terjeofnorway.dev' => array (
+        // The name of the database to select.
+        'database' => 'terjeofnorway',
+
+        // The database username to connect with.
+        'user' => 'craft',
+
+        // The database password to connect with.
+        'password' => 'XJwgaMhgY(XT92SAV8M',
+
+        // The prefix to use when naming tables. This can be no more than 5 characters.
+        'tablePrefix' => 'craft'
+    ),
+
+    'terjeofnorway._dev' => array (
         // The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
         'server' => 'localhost',
 
