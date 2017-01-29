@@ -1,4 +1,4 @@
-<?
+<?php
 
 
 /** This class reads the query string and fetches the resource

@@ -30,7 +30,7 @@ return array(
         'tablePrefix' => 'craft'
     ),
 
-    'terjeofnorway._dev' => array (
+    'terjeofnorway.dev' => array (
         // The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
         'server' => 'localhost',
 
