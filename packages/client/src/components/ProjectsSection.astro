@@ -3,16 +3,26 @@
 ---
 <style>
 @media (max-width: 600px) {
+  .main-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .project-card-mobile-padding {
-    padding-left: 0;
+    padding-left: 0 !important;
     padding-right: 0;
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+  }
+  .projects-columns {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
   }
 }
 </style>
 <section style="margin: 3rem 0 2rem 0;">
   <div class="main-wrapper">
     <h2 style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem; text-align: left;">Pretty little projects</h2>
-    <div style="display: flex; flex-wrap: nowrap; width: 100%;">
+    <div class="projects-columns" style="display: flex; flex-wrap: wrap; width: 100%;">
       <div class="project-card-mobile-padding" style="flex: 1 1 50%; max-width: 50%; background: none; text-align: left; padding-right: 1.5rem;">
         <img src="/heywho.png" alt="HeyWho" style="width: 48px; height: 48px; margin-bottom: 0.5rem;" />
         <h3 style="color: var(--color-primary); margin: 0;">HeyWho</h3>
