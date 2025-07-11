@@ -2,6 +2,12 @@
   /* This class applies the theme variables to the body */
 }
 
+.main-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 :root {
   --color-primary: #D8D597;
   --color-secondary: #8EB45F;
