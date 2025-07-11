@@ -1,0 +1,16 @@
+{
+  "name": "terjeofnorway.no-client",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Terje Karlsen",
+  "license": "ISC",
+  "description": "My name is Terje and I'm a software engineer. This is my website.",
+  "dependencies": {
+    "astro": "^5.11.0"
+  }
+}

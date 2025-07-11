@@ -1,0 +1,10 @@
+.root {
+  /* This class applies the theme variables to the body */
+}
+
+:root {
+  --color-primary: #D8D597;
+  --color-secondary: #8EB45F;
+  --color-background: #313131;
+  --color-text: #CECECE;
+} 

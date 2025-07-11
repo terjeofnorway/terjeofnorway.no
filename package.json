@@ -1,0 +1,16 @@
+  {
+    "name": "terjeofnorway.no",
+    "version": "1.0.0",
+    "scripts": {
+      "dev": "npm run dev --workspace=packages/client",
+      "build": "npm run build --workspace=packages/client",
+      "start": "npm run start --workspace=packages/server",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "workspaces": [
+      "packages/*"
+    ],
+    "author": "Terje Karlsen",
+    "license": "ISC",
+    "description": "My name is Terje and I'm a software engineer. This is my website."
+  }

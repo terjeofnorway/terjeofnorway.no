@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "projectName": "Terjeofnorway.no",
+    "version": "1.0.0",
+    "description": "My name is Terje and I'm a web engineer. This is my website.",
+    "author": "Terje Karlsen",
+    "created": "2025-07-10"
+  },
+  "architecture": {
+    "fileStructure": {
+      "packages": {
+        "client": {
+          "src": {
+            "pages": "Astro pages and routes",
+            "components": "Reusable components",
+            "layouts": "Page layouts",
+            "styles": "CSS modules"
+          },
+          "public": "Static assets",
+          "content": "Markdown files"
+        },
+        "server": {
+          "src": "Express server to serve static files"
+        }
+      }
+    },
+    "deployment": {
+      "container": {
+        "baseImage": "node:18-alpine",
+        "buildProcess": "npm run build (Astro) → serve with Express",
+        "port": 3000
+      }
+    },
+    "buildConfiguration": {
+      "optimization": {
+        "codeSplitting": true,
+        "treeShaking": true,
+        "minification": true
+      }
+    }
+  },
+  "technology": {
+    "framework": "astro",
+    "styling": "css-modules",
+    "contentManagement": "markdown"
+  },
+  "design": {
+    "colorScheme": {
+      "primary": "#D8D597",
+      "secondary": "#8EB45F",
+      "background": "#313131",
+      "text": "#CECECE"
+    },
+    "typography": {
+      "headingFont": "Fira Code",
+      "bodyFont": "Fira Code",
+      "fontWeights": {
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "bold": 700
+      }
+    },
+    "breakpoints": {
+      "mobile": "320px",
+      "tablet": "768px",
+      "desktop": "1024px"
+    }
+  },
+  "pages": [
+    {
+      "id": "home",
+      "name": "Home",
+      "route": "/",
+      "components": [
+        {
+          "type": "hero",
+          "content": {
+            "title": "Terje of Norway",
+            "subtitle": "Developer, gadget geek and food enthusiast."
+          }
+        },
+        {
+          "type": "about",
+          "title": "About me",
+          "content": [
+            {
+              "type": "text",
+              "content": "I’m a senior developer based in Oslo. I work as a consultant at Systek, building modern, resilient web experiences — with a passion for usability, accessibility, and all things geeky. \n\n I’m pragmatic about tools. If it runs in a browser or on a server and makes people’s lives better, I’m interested. I’m the kind of developer who reads the changelog, keeps an eye on web standards, and happily chats with users to understand their pains and gains."
+            },
+            {
+              "type": "text",
+              "content": "I believe tech should be inclusive, privacy-respecting, and human-centred. LGBTQ+ rights and diversity aren’t just side notes — they’re part of what makes teams (and the web) better. \n\nOutside work, I lift weights, care for my plants, and take our greyhound for long walksies.\n\nI like to fiddle with side projects — some that actually get finished, and some that quietly die halfway through.\n\nBasically, I’m always building something — sometimes it even works."
+            }
+          ]
+        },
+        {
+          "type": "projects",
+          "title": "Pretty little projects",
+          "content": [
+            {
+              "type": "project",
+              "title": "HeyWho",
+              "content": "/* An iPhone app I made to help me memorize my colleagues names (we’re 120 in Systek...) */",
+              "url": "https://github.com/terjeofnorway/HeyWho"
+            },
+            {
+              "type": "project",
+              "title": "Prompt Adventure Game",
+              "content": "/* An AI agentic game that lets the user work on their prompting skills. Also, an homage to the 90’s pixel art games. */",
+              "url": "https://github.com/terjeofnorway/prompt-adventure-game"
+            }
+          ]
+        },
+        {
+          "type": "articles",
+          "title": "Articles",
+          "content": [
+            {
+              "type": "article",
+              "title": "Micro learning",
+              "content": "An article about micro learning and the importance of also doing small projects in 10 minute bulk.",
+              "url": "https://medium.com/systek"
+            },
+            {
+              "type": "article",
+              "title": "Sustainable web",
+              "content": "Some thoughts and ramblings about how measuring sustainability for websites.",
+              "url": "https://medium.com/systek"
+            }
+          ]
+        },
+        {
+          "type": "skills",
+          "title": "Skills",
+          "content": [
+            "React", "Preact", "Typescript", "Web Components", "Next.js", "NodeJS", "Vue", "Astro", "Express", "GraphQL", "SCSS", "CSS Modules", "Styled Components", "Vite", "Webpack", "Bun", "Containers", "Kubernetes", "Sentry", "React Testing Library", "Jest", "Vitest", "Github", "Figma", "Storybook", "Headelss CMS", "Elastic Search", "Playwright", "UX", "Accessibility", "NPM."
+          ]
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Terje of Norway",
+    "description": "My name is Terje and I'm a web developer. This is my website.",
+    "keywords": ["terje", "norway", "software", "developer"]
+  }
+}
