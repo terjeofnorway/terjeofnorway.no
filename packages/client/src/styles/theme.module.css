@@ -8,6 +8,13 @@
   padding: 0 1rem;
 }
 
+@media (max-width: 600px) {
+  .main-wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
 :root {
   --color-primary: #D8D597;
   --color-secondary: #8EB45F;
