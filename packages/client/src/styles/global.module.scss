@@ -1,0 +1,70 @@
+// Breakpoint variables
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$large-desktop: 1200px;
+
+// Mixins for easy breakpoint usage
+@mixin mobile {
+  @media (max-width: #{$mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// Mobile-first responsive mixins
+@mixin mobile-up {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+.body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+}
+
+.mainWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 1rem;
+  }
+}
+
+/* General overrides */
+p {
+  line-height: 1.5rem;
+}

@@ -1,0 +1,17 @@
+---
+import clsx from 'clsx';
+import theme from '../styles/theme.module.scss';
+import global from '../styles/global.module.scss';
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terjeofnorway</title>
+  </head>
+  <body class={clsx(theme.root, global.body)}>
+    <div class={global.mainWrapper}>
+      <slot />
+    </div>
+  </body>
+</html> 
