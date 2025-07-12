@@ -1,7 +1,10 @@
 {
   "name": "terjeofnorway.no-server",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Terje Karlsen",
@@ -9,5 +12,8 @@
   "description": "My name is Terje and I'm a software engineer. This is my website.",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3"
   }
 }
