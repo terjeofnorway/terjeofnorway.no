@@ -1,0 +1,26 @@
+@import '../styles/global.module.scss';
+
+.skillsSection {
+  margin: var(--spacing-large) 0 var(--spacing-medium) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillsContainer {
+  width: 100%;
+  max-width: 900px;
+}
+
+.skillsTitle {
+  color: var(--color-primary);
+  font-size: var(--font-size-xlarge);
+  margin-bottom: var(--spacing-medium);
+  text-align: left;
+}
+
+.skillsText {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  text-align: left;
+}
