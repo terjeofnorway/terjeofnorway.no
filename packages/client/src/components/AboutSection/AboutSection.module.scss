@@ -1,13 +1,22 @@
+@import '../../styles/breakpoints.module.scss';
+
 .aboutSection {
-  margin: 3rem 0 2rem 0;
+  color: var(--color-text);
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  color: var(--color-text);
-}
+  margin: 3rem 0> 2rem 0;
 
-.aboutColumn {
-  flex: 1 1 320px;
-  max-width: 420px;
+  .content {
+    flex: 1 1 320px;
+    columns: 1;
+    column-gap: 2rem;
+    break-inside: avoid;
+    vertical-align: top;
+
+    @include desktop-up {
+      columns: 2;
+    }
+  }
 }

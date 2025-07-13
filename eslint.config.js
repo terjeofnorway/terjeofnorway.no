@@ -20,24 +20,6 @@ export default [
     ],
   },
 
-  // JavaScript files
-  {
-    files: ['**/*.js', '**/*.mjs'],
-    languageOptions: {
-      globals: {
-        ...globals.node,
-        ...globals.browser,
-      },
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-      },
-    },
-    rules: {
-      ...js.configs.recommended.rules,
-    },
-  },
-
   // TypeScript files (without type checking for ESLint 9 compatibility)
   {
     files: ['**/*.ts', '**/*.tsx'],
