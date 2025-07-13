@@ -1,7 +1,7 @@
-@use '../styles/global.module.scss' as *;
+@use '../../styles/global.module.scss' as *;
 
 .articlesSection {
-  margin: var(--spacing-large) 0 var(--spacing-medium) 0;
+  @include section;
 }
 
 .articlesTitle {

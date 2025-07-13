@@ -1,12 +1,7 @@
-@use '../../styles/breakpoints.module.scss' as *;
+@use '../../styles/global.module.scss' as *;
 
 .aboutSection {
-  color: var(--color-text);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin: 3rem 0> 2rem 0;
+  @include section;
 
   .content {
     flex: 1 1 320px;

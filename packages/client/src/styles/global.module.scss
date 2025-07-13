@@ -18,6 +18,12 @@
   }
 }
 
+@mixin section {
+  margin: 0 0 var(--spacing-xlarge) 0;
+  border-top: 3px dotted var(--color-primary-dark);
+  padding: var(--spacing-xlarge) 0 0 0;
+}
+
 /* General overrides */
 p {
   line-height: 1.5rem;
