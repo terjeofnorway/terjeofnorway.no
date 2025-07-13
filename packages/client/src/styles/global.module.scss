@@ -11,7 +11,7 @@
 .mainWrapper {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 var(--spacing-medium);
+  padding: 0 var(--spacing-medium) var(--spacing-large) var(--spacing-medium);
 
   @include mobile {
     padding: 0 1rem;
