@@ -1,4 +1,4 @@
-@import '../../styles/breakpoints.module.scss';
+@use '../../styles/breakpoints.module.scss' as *;
 
 .aboutSection {
   color: var(--color-text);

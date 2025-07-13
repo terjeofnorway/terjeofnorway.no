@@ -1,4 +1,4 @@
-@import '../../styles/global.module.scss';
+@use '../../styles/global.module.scss' as *;
 
 .sectionTitle {
   color: var(--color-primary);

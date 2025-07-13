@@ -1,4 +1,4 @@
-@import '../styles/global.module.scss';
+@use '../styles/global.module.scss' as *;
 
 .projectsSection {
   margin: var(--spacing-large) 0 var(--spacing-medium) 0;

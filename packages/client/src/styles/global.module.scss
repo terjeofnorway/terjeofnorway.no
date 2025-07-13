@@ -1,4 +1,5 @@
-@import './breakpoints.module.scss';
+@use './breakpoints.module.scss' as *;
+@forward './breakpoints.module.scss';
 
 .body {
   background: var(--color-background);
