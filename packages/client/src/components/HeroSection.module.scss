@@ -1,0 +1,30 @@
+@import '../styles/global.module.scss';
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--spacing-large);
+
+  .profileImage {
+    border-radius: 50%;
+    height: 220px;
+    margin-bottom: var(--spacing-large);
+    object-fit: cover;
+    width: 220px;
+  }
+
+  .heroTitle {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0 0 var(--spacing-small) 0;
+  }
+
+  .heroSubtitle {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 0;
+  }
+}
