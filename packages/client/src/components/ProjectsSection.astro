@@ -2,10 +2,11 @@
 // Projects section for homepage
 import styles from './ProjectsSection.module.scss';
 import Card from './Card/Card.astro';
+import SectionTitle from './SectionTitle/SectionTitle.astro';
 ---
 <section class={styles.projectsSection}>
   <div class="main-wrapper">
-    <h2 class={styles.projectsTitle}>Pretty little projects</h2>
+    <SectionTitle>Pretty little projects</SectionTitle>
     <div class={styles.projectsColumns}>
       <Card 
         title="HeyWho"

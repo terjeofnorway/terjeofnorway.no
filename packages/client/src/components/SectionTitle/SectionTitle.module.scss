@@ -1,0 +1,8 @@
+@import '../../styles/global.module.scss';
+
+.sectionTitle {
+  color: var(--color-primary);
+  font-size: var(--font-size-xlarge);
+  margin-bottom: var(--spacing-medium);
+  text-align: left;
+}

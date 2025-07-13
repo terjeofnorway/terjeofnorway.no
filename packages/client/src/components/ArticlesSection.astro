@@ -2,10 +2,11 @@
 // Articles section for homepage
 import styles from './ArticlesSection.module.scss';
 import Card from './Card/Card.astro';
+import SectionTitle from './SectionTitle/SectionTitle.astro';
 ---
 <section class={styles.articlesSection}>
   <div class="main-wrapper">
-    <h2 class={styles.articlesTitle}>Articles</h2>
+    <SectionTitle>Articles</SectionTitle>
     <div class={styles.articlesColumns}>
       <Card 
         title="Micro Learning"
