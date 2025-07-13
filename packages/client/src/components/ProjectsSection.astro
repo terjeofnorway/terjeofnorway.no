@@ -1,41 +1,52 @@
 ---
 // Projects section for homepage
 import styles from './ProjectsSection.module.scss';
+import Card from './Card/Card.astro';
 ---
 <section class={styles.projectsSection}>
   <div class="main-wrapper">
     <h2 class={styles.projectsTitle}>Pretty little projects</h2>
     <div class={styles.projectsColumns}>
-      <div class={styles.projectCard}>
-        <img src="/heywho.png" alt="HeyWho" class={styles.projectIcon} />
-        <h3 class={styles.projectTitle}>HeyWho</h3>
-        <p class={styles.projectDescription}>/* An iPhone app I made to help me memorize my colleagues names (we're 120 in Systek...) */</p>
-        <a href="https://github.com/terjeofnorway/HeyWho" class={styles.projectLink}>github.com/terjeofnorway/heywho</a>
-      </div>
-      <div class={styles.projectCard}>
-        <img src="/prompt-adventure-game.png" alt="Prompt Adventure Game" class={styles.projectIcon} />
-        <h3 class={styles.projectTitle}>Prompt Adventure Game</h3>
-        <p class={styles.projectDescription}>/* An AI agentic game that lets the user work on their prompting skills. Also, an homage to the 90's pixel art games. */</p>
-        <a href="https://github.com/terjeofnorway/prompt-adventure-game" class={styles.projectLink}>github.com/terjeofnorway/promptadventuregame</a>
-      </div>
-      <div class={styles.projectCard}>
-        <img src="/prompt-adventure-game.png" alt="Prompt Adventure Game" class={styles.projectIcon} />
-        <h3 class={styles.projectTitle}>Prompt Adventure Game</h3>
-        <p class={styles.projectDescription}>/* An AI agentic game that lets the user work on their prompting skills. Also, an homage to the 90's pixel art games. */</p>
-        <a href="https://github.com/terjeofnorway/prompt-adventure-game" class={styles.projectLink}>github.com/terjeofnorway/promptadventuregame</a>
-      </div>
-      <div class={styles.projectCard}>
-        <img src="/prompt-adventure-game.png" alt="Prompt Adventure Game" class={styles.projectIcon} />
-        <h3 class={styles.projectTitle}>Prompt Adventure Game</h3>
-        <p class={styles.projectDescription}>/* An AI agentic game that lets the user work on their prompting skills. Also, an homage to the 90's pixel art games. */</p>
-        <a href="https://github.com/terjeofnorway/prompt-adventure-game" class={styles.projectLink}>github.com/terjeofnorway/promptadventuregame</a>
-      </div>
-      <div class={styles.projectCard}>
-        <img src="/prompt-adventure-game.png" alt="Prompt Adventure Game" class={styles.projectIcon} />
-        <h3 class={styles.projectTitle}>Prompt Adventure Game</h3>
-        <p class={styles.projectDescription}>/* An AI agentic game that lets the user work on their prompting skills. Also, an homage to the 90's pixel art games. */</p>
-        <a href="https://github.com/terjeofnorway/prompt-adventure-game" class={styles.projectLink}>github.com/terjeofnorway/promptadventuregame</a>
-      </div>
+      <Card 
+        title="HeyWho"
+        description="/* An iPhone app I made to help me memorize my colleagues names (we're 120 in Systek...) */"
+        link="https://github.com/terjeofnorway/HeyWho"
+        linkText="github.com/terjeofnorway/heywho"
+        icon="/heywho.png"
+        iconAlt="HeyWho"
+      />
+      <Card 
+        title="Prompt Adventure Game"
+        description="/* An AI agentic game that lets the user work on their prompting skills. Also, an homage to the 90's pixel art games. */"
+        link="https://github.com/terjeofnorway/prompt-adventure-game"
+        linkText="github.com/terjeofnorway/promptadventuregame"
+        icon="/prompt-adventure-game.png"
+        iconAlt="Prompt Adventure Game"
+      />
+      <Card 
+        title="Prompt Adventure Game"
+        description="/* An AI agentic game that lets the user work on their prompting skills. Also, an homage to the 90's pixel art games. */"
+        link="https://github.com/terjeofnorway/prompt-adventure-game"
+        linkText="github.com/terjeofnorway/promptadventuregame"
+        icon="/prompt-adventure-game.png"
+        iconAlt="Prompt Adventure Game"
+      />
+      <Card 
+        title="Prompt Adventure Game"
+        description="/* An AI agentic game that lets the user work on their prompting skills. Also, an homage to the 90's pixel art games. */"
+        link="https://github.com/terjeofnorway/prompt-adventure-game"
+        linkText="github.com/terjeofnorway/promptadventuregame"
+        icon="/prompt-adventure-game.png"
+        iconAlt="Prompt Adventure Game"
+      />
+      <Card 
+        title="Prompt Adventure Game"
+        description="/* An AI agentic game that lets the user work on their prompting skills. Also, an homage to the 90's pixel art games. */"
+        link="https://github.com/terjeofnorway/prompt-adventure-game"
+        linkText="github.com/terjeofnorway/promptadventuregame"
+        icon="/prompt-adventure-game.png"
+        iconAlt="Prompt Adventure Game"
+      />
     </div>
   </div>
 </section> 

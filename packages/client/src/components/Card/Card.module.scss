@@ -1,0 +1,27 @@
+@import '../../styles/global.module.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--spacing-small);
+}
+
+.cardTitle {
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.cardDescription {
+  color: var(--color-secondary);
+  font-size: var(--font-size-small);
+}
+
+.cardLink {
+  color: var(--color-text);
+}

@@ -1,0 +1,20 @@
+---
+// Reusable Card component for projects and articles
+export interface Props {
+  title: string;
+  description: string;
+  link: string;
+  linkText: string;
+  icon?: string;
+  iconAlt?: string;
+}
+
+const { title, description, link, linkText, icon, iconAlt } = Astro.props;
+import styles from './Card.module.scss';
+---
+<div class={styles.card}>
+  {icon && <img src={icon} alt={iconAlt || title} class={styles.cardIcon} />}
+  <h3 class={styles.cardTitle}>{title}</h3>
+  <p class={styles.cardDescription}>{description}</p>
+  <a href={link} class={styles.cardLink}>{linkText}</a>
+</div> 

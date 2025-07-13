@@ -1,0 +1,25 @@
+@import '../styles/global.module.scss';
+
+.articlesSection {
+  margin: var(--spacing-large) 0 var(--spacing-medium) 0;
+}
+
+.articlesTitle {
+  color: var(--color-primary);
+  font-size: var(--font-size-xlarge);
+  margin-bottom: var(--spacing-medium);
+  text-align: left;
+}
+
+.articlesColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-large);
+  width: 100%;
+}
+
+@include mobile {
+  .articlesColumns {
+    grid-template-columns: 1fr;
+  }
+}

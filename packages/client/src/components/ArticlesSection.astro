@@ -1,38 +1,24 @@
 ---
 // Articles section for homepage
+import styles from './ArticlesSection.module.scss';
+import Card from './Card/Card.astro';
 ---
-<style>
-@media (max-width: 600px) {
-  .main-wrapper {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .article-card-mobile-padding {
-    padding-left: 0 !important;
-    padding-right: 0;
-    max-width: 100% !important;
-    flex-basis: 100% !important;
-  }
-  .articles-columns {
-    flex-direction: column !important;
-    flex-wrap: wrap !important;
-  }
-}
-</style>
-<section style="margin: 3rem 0 2rem 0;">
+<section class={styles.articlesSection}>
   <div class="main-wrapper">
-    <h2 style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem; text-align: left;">Articles</h2>
-    <div class="articles-columns" style="display: flex; flex-wrap: wrap; width: 100%;">
-      <div class="article-card-mobile-padding" style="flex: 1 1 50%; max-width: 50%; background: none; text-align: left; padding-right: 1.5rem;">
-        <h3 style="color: var(--color-primary); margin: 0;">Micro Learning</h3>
-        <p style="color: var(--color-secondary); font-size: 0.95rem;">An article about micro learning and the importance of also doing small projects in 10 minute bulk.</p>
-        <a href="https://medium.com/systek/microlearning" style="color: var(--color-text); font-size: 0.9rem;">medium.com/systek/microlearning</a>
-      </div>
-      <div class="article-card-mobile-padding" style="flex: 1 1 50%; max-width: 50%; background: none; text-align: left; padding-left: 1.5rem;">
-        <h3 style="color: var(--color-primary); margin: 0;">Sustainable web</h3>
-        <p style="color: var(--color-secondary); font-size: 0.95rem;">Some thoughts and ramblings about how measuring sustainability for websites.</p>
-        <a href="https://medium.com/systek/microlearning" style="color: var(--color-text); font-size: 0.9rem;">medium.com/systek/microlearning</a>
-      </div>
+    <h2 class={styles.articlesTitle}>Articles</h2>
+    <div class={styles.articlesColumns}>
+      <Card 
+        title="Micro Learning"
+        description="An article about micro learning and the importance of also doing small projects in 10 minute bulk."
+        link="https://medium.com/systek/microlearning"
+        linkText="medium.com/systek/microlearning"
+      />
+      <Card 
+        title="Sustainable web"
+        description="Some thoughts and ramblings about how measuring sustainability for websites."
+        link="https://medium.com/systek/microlearning"
+        linkText="medium.com/systek/microlearning"
+      />
     </div>
   </div>
 </section> 
