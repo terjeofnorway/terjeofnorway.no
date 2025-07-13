@@ -1,8 +1,10 @@
 # Node.js
 node_modules
+**/node_modules
 
 # Astro build output
 dist/
+**/dist
 
 # Logs
 npm-debug.log*
