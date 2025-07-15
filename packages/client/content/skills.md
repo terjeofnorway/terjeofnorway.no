@@ -1,0 +1,36 @@
+---
+title: Skills
+skills:
+  - React
+  - Preact
+  - Typescript
+  - Web Components
+  - Next.js
+  - NodeJS
+  - Vue
+  - Astro
+  - Express
+  - GraphQL
+  - SCSS
+  - CSS Modules
+  - Styled Components
+  - Vite
+  - Webpack
+  - Bun
+  - Containers
+  - Kubernetes
+  - Sentry
+  - React Testing Library
+  - Jest
+  - Vitest
+  - Github
+  - Figma
+  - Storybook
+  - Headless CMS
+  - Elastic Search
+  - Playwright
+  - UX
+  - Accessibility
+  - NPM
+softskills: Oh, and actual softskills!
+---

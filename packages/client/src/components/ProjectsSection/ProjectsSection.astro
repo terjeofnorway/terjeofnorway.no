@@ -3,27 +3,24 @@
 import Card from '../Card/Card.astro';
 import SectionTitle from '../SectionTitle/SectionTitle.astro';
 import styles from './ProjectsSection.module.scss';
+
+const [projectData] = await Astro.glob('../../../content/project.md');
+const { title, projects } = projectData.frontmatter;
 ---
 <section class={styles.projectsSection}>
   <div class="main-wrapper">
-    <SectionTitle>Pretty little projects</SectionTitle>
+    <SectionTitle>{title}</SectionTitle>
     <div class={styles.projectsColumns}>
-      <Card 
-        title="HeyWho"
-        description="/* An iPhone app I made to help me memorize my colleagues names (we're 120 in Systek...) */"
-        link="https://heywho.app"
-        linkText="heywho.app"
-        icon="/heywho.png"
-        iconAlt="HeyWho"
-      />
-      <Card 
-        title="Prompt Adventure Game"
-        description="/* An AI agentic game that lets the user work on their prompting skills. Also, an homage to the 90's pixel art games. */"
-        link="https://github.com/terjeofnorway/prompt-adventure-game"
-        linkText="github.com/terjeofnorway/prompt-adventure-game"
-        icon="/prompt-adventure-game.png"
-        iconAlt="Prompt Adventure Game"
-      />
+      {projects && projects.map((project: any) => (
+        <Card 
+          title={project.title}
+          description={project.description}
+          link={project.link}
+          linkText={project.linkText}
+          icon={project.icon}
+          iconAlt={project.iconAlt}
+        />
+      ))}
     </div>
   </div>
 </section> 
