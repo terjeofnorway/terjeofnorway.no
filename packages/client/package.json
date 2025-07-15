@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "My name is Terje and I'm a software engineer. This is my website.",
   "dependencies": {
+    "@astrojs/markdown-remark": "^6.3.2",
     "astro": "^5.11.0",
     "clsx": "^2.1.1"
   },
