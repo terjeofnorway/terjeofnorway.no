@@ -6,9 +6,47 @@ import AboutSection from '../components/AboutSection/AboutSection.astro';
 import ProjectsSection from '../components/ProjectsSection/ProjectsSection.astro';
 import ArticlesSection from '../components/ArticlesSection/ArticlesSection.astro';
 import SkillsSection from '../components/SkillsSection/SkillsSection.astro';
----
+import JsonLd from '../components/JsonLd.astro';
 
+const [about] = await Astro.glob('../../content/about.md');
+const [articlesData] = await Astro.glob('../../content/articles.md');
+const [projectData] = await Astro.glob('../../content/project.md');
+const [skillsData] = await Astro.glob('../../content/skills.md');
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Terje Karlsen",
+  "description": about && (await about.compiledContent()),
+  "jobTitle": "Senior Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Systek"
+  },
+  "url": "https://terjeofnorway.no/",
+  "knowsAbout": skillsData?.frontmatter?.skills,
+  "hasOccupation": [
+    {
+      "@type": "Occupation",
+      "name": "Developer"
+    }
+  ],
+  "hasCredential": articlesData?.frontmatter?.articles?.map((article: { title: string; description: string; link: string }) => ({
+    "@type": "CreativeWork",
+    "name": article.title,
+    "description": article.description,
+    "url": article.link
+  })),
+  "hasCreated": projectData?.frontmatter?.projects?.map((project: { title: string; description: string; link: string }) => ({
+    "@type": "CreativeWork",
+    "name": project.title,
+    "description": project.description,
+    "url": project.link
+  }))
+};
+---
 <RootLayout>
+  <JsonLd data={jsonLd} />
   <HeroSection />
   <AboutSection />
   <ProjectsSection />
