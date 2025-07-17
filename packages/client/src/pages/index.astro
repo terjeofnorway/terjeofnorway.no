@@ -7,6 +7,7 @@ import ProjectsSection from '../components/ProjectsSection/ProjectsSection.astro
 import ArticlesSection from '../components/ArticlesSection/ArticlesSection.astro';
 import SkillsSection from '../components/SkillsSection/SkillsSection.astro';
 import JsonLd from '../components/JsonLd.astro';
+import { stripTags } from '../helpers/strings';
 
 const [about] = await Astro.glob('../../content/about.md');
 const [articlesData] = await Astro.glob('../../content/articles.md');
@@ -17,7 +18,7 @@ const jsonLd = [{
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Terje Karlsen",
-  "description": about && (await about.compiledContent()),
+  "description": about && stripTags(await about.compiledContent()),
   "jobTitle": "Senior Developer",
   "worksFor": {
     "@type": "Organization",
