@@ -1,9 +1,11 @@
 ---
 title: Articles
 articles:
-  - title: Generativ søkemotoroptimalisering: Slik kaprer du synlighet i AI-søk
+  - title: Generative Engine Optimization
     description:
-      Stadig flere bruker AI-assistenter når de søker, og ser ikke lenger listen over søkeresultatet slik man gjør i en vanlig SERP. Slik sørger du for at siden din fortsatt er med i AI-søket!
+      In a field that is moving incredibly fast, I’m attempting to explain how GEO (AI) works and to
+      emphasise why it’s more important than ever that your content is selected by the search engine
+      before being passed on to the LLM.
     link: https://medium.com/systek/slik-kaprer-du-synlighet-i-ai-sok-cb39387cff18
     linkText: medium.com/systek/slik-kaprer-du-synlighet-i-ai-sok
   - title: Microlearning
