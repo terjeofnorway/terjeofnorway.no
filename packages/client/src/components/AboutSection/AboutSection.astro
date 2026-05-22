@@ -2,8 +2,7 @@
 // About section for homepage
 
 import styles from './AboutSection.module.scss';
-
-const [about] = await Astro.glob('../../../content/about.md');
+import * as about from '../../../content/about.md';
 ---
 <section class={styles.aboutSection}>
   <div class={styles.content} set:html={about && await about.compiledContent()} />

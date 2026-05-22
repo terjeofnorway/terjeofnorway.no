@@ -2,8 +2,8 @@
 // Skills section for homepage
 import styles from './SkillsSection.module.scss';
 import SectionTitle from './../SectionTitle/SectionTitle.astro';
+import * as skillsData from '../../../content/skills.md';
 
-const [skillsData] = await Astro.glob('../../../content/skills.md');
 const { title, skills, softskills } = skillsData.frontmatter;
 ---
 <section class={styles.skillsSection}>

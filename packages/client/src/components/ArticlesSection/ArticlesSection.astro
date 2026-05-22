@@ -3,8 +3,8 @@
 import styles from './ArticlesSection.module.scss';
 import Card from './../Card/Card.astro';
 import SectionTitle from './../SectionTitle/SectionTitle.astro';
+import * as articlesData from '../../../content/articles.md';
 
-const [articlesData] = await Astro.glob('../../../content/articles.md');
 const { title, articles } = articlesData.frontmatter;
 ---
 <section class={styles.articlesSection}>
