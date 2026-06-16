@@ -52,7 +52,7 @@ jobs:
             ghcr.io/${{ github.repository_owner }}/terjeofnorway.no:latest
 
       - name: Pull & deploy container to DigitalOcean via SSH
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.5
         with:
           host: ${{ secrets.DIGITAL_OCEAN_SSH_ADDRESS }}
           username: root
