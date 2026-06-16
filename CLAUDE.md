@@ -39,11 +39,11 @@ Commands (run from repo root):
 - **No tests exist** — every `test` script just echoes an error and exits 1.
 
 Deployment (`.github/workflows/build_and_deploy.yml`, on push to `main`):
-1. `npm ci` + `npm run build` **on the CI runner** (Node 22).
+1. `npm ci` + `npm run build` **on the CI runner** (Node 22), producing `packages/*/dist`.
 2. Docker image built and pushed to `ghcr.io/terjeofnorway/terjeofnorway.no`.
-3. SSH into a **DigitalOcean** droplet → `docker pull` + `docker run` on port 8080 (`--restart unless-stopped`, container name `terjeofnorway.no`).
+3. SSH into a **DigitalOcean** droplet → prune old images → `docker pull` + `docker run` on port 8080 (`--restart unless-stopped`, container name `terjeofnorway.no`), then prune again so only the running image remains. The droplet is ~10 GB; the prune steps exist because images used to accumulate until the disk filled (`no space left on device` during `docker pull`).
 
-**The Dockerfile does not build anything.** It `COPY`s pre-built `node_modules`, `packages/client/dist`, and `packages/server/dist` into a `node:22-alpine` image. So the image is only valid after a prior `npm ci && npm run build`. A bare `docker build` (without building first) produces a broken/empty image — this is why the CI order matters. `.env` is generated in CI (`PORT=8080`, `GIT_SHA=<sha>`) and copied to `packages/server/.env`.
+**The Dockerfile does not build the app** — it relies on the CI-built `packages/client/dist` and `packages/server/dist`, so the image is only valid after a prior `npm run build`. It installs **only the server's production deps** (`express`, `dotenv`) via `npm ci --omit=dev` against `packages/server/package-lock.json` — it deliberately does **not** ship the dev/build toolchain (`astro`, `sharp`, `sass`, `typescript`, `@types/*`), which keeps the image small and off the runtime attack surface. The runtime `CMD` is `node dist/server.js` (cwd `/app/packages/server`, so `dotenv` reads `./.env`). `.env` is generated in CI (`PORT=8080`, `GIT_SHA=<sha>`) and copied to `packages/server/.env`. `.dockerignore` keeps `node_modules`/`.git` out of the build context.
 
 ## Misc gotchas
 

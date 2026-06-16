@@ -58,6 +58,8 @@ jobs:
           username: root
           key: ${{ secrets.DIGITAL_OCEAN_SSH_KEY }}
           script: |
+            # Reclaim disk before pulling. The still-running container's image is kept.
+            docker image prune -af || true
             docker pull ghcr.io/terjeofnorway/terjeofnorway.no:${{ github.sha }}
             docker stop terjeofnorway.no || true
             docker rm terjeofnorway.no || true

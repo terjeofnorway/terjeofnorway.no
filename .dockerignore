@@ -1,0 +1,13 @@
+# Keep the build context small and avoid leaking anything not explicitly COPYed.
+# NOTE: the Dockerfile DOES copy packages/*/dist and .env — do not ignore those.
+node_modules
+**/node_modules
+.git
+.github
+.astro
+**/.astro
+*.log
+npm-debug.log*
+.vscode
+.idea
+.DS_Store
