@@ -5,7 +5,24 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  # npm workspaces: pointing at "/" covers the root manifest and all packages/*
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: "weekly" 
+      interval: "weekly"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+
+  # Base image in the Dockerfile (node:22-alpine)
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # Actions used in .github/workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
