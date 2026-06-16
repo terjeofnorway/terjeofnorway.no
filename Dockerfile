@@ -2,7 +2,7 @@
 # so the image ships ONLY the server's production deps (express, dotenv).
 # Build/dev deps (astro, sharp, sass, typescript, eslint, @types/*) are never installed
 # here — they exist solely to produce the dist/ artifacts in CI, which we copy in below.
-FROM node:22-alpine
+FROM node:26-alpine
 WORKDIR /app/packages/server
 ENV NODE_ENV=production
 
