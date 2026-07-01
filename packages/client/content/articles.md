@@ -1,6 +1,11 @@
 ---
 title: Articles
 articles:
+  - title: llms.txt - made for language models, ignored by agents
+    description:
+      Everyone says you need an llms.txt so ChatGPT and Perplexity will cite you. Here's why the file built for language models is the one they never read — and what to do instead.
+    link: https://medium.com/systek/llms-txt-laget-for-sprakmodeller-ignorert-av-agenter-ba643fcfd6ae
+    linkText: medium.com/systek/llms-txt-laget-for-sprakmodeller-ignorert-av-agenter
   - title: Generative Engine Optimization
     description:
       In a field that is moving incredibly fast, I’m attempting to explain how GEO (AI) works and to
