@@ -11,15 +11,13 @@
   }
 
   .projectsColumns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-large);
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
 
   @include mobile {
     .projectsColumns {
-      grid-template-columns: 1fr;
     }
   }
 }

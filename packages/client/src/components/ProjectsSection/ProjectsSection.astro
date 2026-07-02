@@ -12,15 +12,15 @@ const { title, projects } = projectData.frontmatter;
     <SectionTitle>{title}</SectionTitle>
     <div class={styles.projectsColumns}>
       {projects && projects.map((project: any) => (
-        <Card 
+        <Card
           title={project.title}
           description={project.description}
           link={project.link}
           linkText={project.linkText}
-          icon={project.icon}
-          iconAlt={project.iconAlt}
+          image={project.image}
+          imageAlt={project.imageAlt}
         />
       ))}
     </div>
   </div>
-</section> 
+</section>

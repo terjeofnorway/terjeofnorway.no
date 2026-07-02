@@ -5,16 +5,18 @@ export interface Props {
   description: string;
   link: string;
   linkText: string;
-  icon?: string;
-  iconAlt?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
-const { title, description, link, linkText, icon, iconAlt } = Astro.props;
+const { title, description, link, linkText, image, imageAlt } = Astro.props;
 import styles from './Card.module.scss';
 ---
 <div class={styles.card}>
-  {icon && <img src={icon} alt={iconAlt || title} class={styles.cardIcon} />}
-  <h3 class={styles.cardTitle}>{title}</h3>
-  <p class={styles.cardDescription}>{description}</p>
-  <a href={link} class={styles.cardLink}>{linkText}</a>
-</div> 
+  {image && <div class={styles.cardImage}><img src={image} alt={imageAlt || title} /></div>}
+  <div class={styles.cardContent}>
+    <h3 class={styles.cardTitle}>{title}</h3>
+    <p class={styles.cardDescription}>{description}</p>
+    <a href={link} class={styles.cardLink}>{linkText}</a>
+  </div>
+</div>
