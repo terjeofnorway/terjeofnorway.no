@@ -8,6 +8,7 @@ import ArticlesSection from '../components/ArticlesSection/ArticlesSection.astro
 import SkillsSection from '../components/SkillsSection/SkillsSection.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { stripTags } from '../helpers/strings';
+import { SITE_URL, PERSON_ID, PROFILE_IMAGE, EMPLOYER, SAME_AS } from '../data/profile';
 
 import * as about from '../../content/about.md';
 import * as articlesData from '../../content/articles.md';
@@ -17,14 +18,18 @@ import * as skillsData from '../../content/skills.md';
 const jsonLd = [{
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": PERSON_ID,
   "name": "Terje Karlsen",
   "description": about && stripTags(await about.compiledContent()),
   "jobTitle": "Senior Developer",
+  "image": PROFILE_IMAGE,
+  "sameAs": SAME_AS,
   "worksFor": {
     "@type": "Organization",
-    "name": "Systek"
+    "name": EMPLOYER.name,
+    "url": EMPLOYER.url
   },
-  "url": "https://terjeofnorway.no/",
+  "url": SITE_URL,
   "knowsAbout": skillsData?.frontmatter?.skills,
   "hasOccupation": [
     {
