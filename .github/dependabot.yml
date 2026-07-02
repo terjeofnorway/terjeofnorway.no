@@ -5,7 +5,8 @@
 
 version: 2
 updates:
-  # npm workspaces: pointing at "/" covers the root manifest and all packages/*
+  # pnpm workspace. Dependabot's "npm" ecosystem also handles pnpm-lock.yaml;
+  # pointing at "/" covers the root manifest and all packages/*
   - package-ecosystem: "npm"
     directory: "/"
     schedule:

@@ -2,17 +2,15 @@
   "name": "terjeofnorway.no",
   "version": "1.0.0",
   "type": "module",
+  "packageManager": "pnpm@11.1.1",
   "scripts": {
-    "dev": "npm run dev --workspace=packages/client",
-    "build": "npm run build --workspace=packages/client && npm run build --workspace=packages/server",
-    "start": "npm run start --workspace=packages/server",
+    "dev": "pnpm --filter terjeofnorway.no-client run dev",
+    "build": "pnpm --filter terjeofnorway.no-client run build && pnpm --filter terjeofnorway.no-server run build",
+    "start": "pnpm --filter terjeofnorway.no-server run start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^8.62.0",

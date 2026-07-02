@@ -14,7 +14,7 @@ Check out my articles on [Medium](https://medium.com/@terjeofnorway) where I sha
 
 - **Frontend**: Astro (static site generator)
 - **Backend**: Express.js (Node.js server)
-- **Package Management**: npm workspaces for monorepo structure
+- **Package Management**: pnpm workspaces for monorepo structure
 - **Development**: Hot reload with Astro dev server
 
 ## Structure
