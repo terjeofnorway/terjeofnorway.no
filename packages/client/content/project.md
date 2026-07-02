@@ -8,6 +8,8 @@ projects:
     linkText: heywho.app
     icon: /heywho.png
     iconAlt: HeyWho
+    operatingSystem: iOS
+    applicationCategory: BusinessApplication
   - title: Prompt Adventure Game
     description:
       An AI agentic game that lets the user work on their prompting skills. Also, an homage to the
@@ -16,4 +18,5 @@ projects:
     linkText: github.com/terjeofnorway/prompt-adventure-game
     icon: /prompt-adventure-game.png
     iconAlt: Prompt Adventure Game
+    applicationCategory: GameApplication
 ---

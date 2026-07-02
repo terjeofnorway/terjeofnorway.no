@@ -8,52 +8,57 @@ import ArticlesSection from '../components/ArticlesSection/ArticlesSection.astro
 import SkillsSection from '../components/SkillsSection/SkillsSection.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { stripTags } from '../helpers/strings';
+import { SITE_URL, PERSON_ID, PROFILE_IMAGE, EMPLOYER, SAME_AS } from '../data/profile';
 
 import * as about from '../../content/about.md';
 import * as articlesData from '../../content/articles.md';
 import * as projectData from '../../content/project.md';
 import * as skillsData from '../../content/skills.md';
 
-const jsonLd = [{
+const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Terje Karlsen",
-  "description": about && stripTags(await about.compiledContent()),
-  "jobTitle": "Senior Developer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Systek"
-  },
-  "url": "https://terjeofnorway.no/",
-  "knowsAbout": skillsData?.frontmatter?.skills,
-  "hasOccupation": [
+  "@graph": [
     {
-      "@type": "Occupation",
-      "name": "Developer"
-    }
+      "@type": "Person",
+      "@id": PERSON_ID,
+      "name": "Terje Karlsen",
+      "description": about && stripTags(await about.compiledContent()),
+      "jobTitle": "Senior Developer",
+      "image": PROFILE_IMAGE,
+      "sameAs": SAME_AS,
+      "worksFor": {
+        "@type": "Organization",
+        "name": EMPLOYER.name,
+        "url": EMPLOYER.url
+      },
+      "url": SITE_URL,
+      "knowsAbout": skillsData?.frontmatter?.skills,
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Developer"
+        }
+      ]
+    },
+    ...articlesData?.frontmatter?.articles?.map((article: { title: string; description: string; link: string; datePublished?: string }) => ({
+      "@type": "Article",
+      "headline": article.title,
+      "description": article.description,
+      "url": article.link,
+      ...(article.datePublished ? { "datePublished": article.datePublished } : {}),
+      "author": { "@id": PERSON_ID }
+    })),
+    ...projectData?.frontmatter?.projects?.map((project: { title: string; description: string; link: string; applicationCategory?: string; operatingSystem?: string }) => ({
+      "@type": "SoftwareApplication",
+      "name": project.title,
+      "description": project.description,
+      "url": project.link,
+      ...(project.applicationCategory ? { "applicationCategory": project.applicationCategory } : {}),
+      ...(project.operatingSystem ? { "operatingSystem": project.operatingSystem } : {}),
+      "creator": { "@id": PERSON_ID }
+    }))
   ]
-},
-  ...articlesData?.frontmatter?.articles?.map((article: { title: string; description: string; link: string }) => ({
-    "@type": "Article",
-    "name": article.title,
-    "description": article.description,
-    "url": article.link,
-    "author": {
-      "@type": "Person",
-      "name": "Terje Karlsen"
-    }
-  })),
-  ...projectData?.frontmatter?.projects?.map((project: { title: string; description: string; link: string }) => ({
-    "@type": "CreativeWork",
-    "name": project.title,
-    "description": project.description,
-    "url": project.link,
-    "creator": {
-      "@type": "Person",
-      "name": "Terje Karlsen"
-    }
-  }))
-];
+};
 ---
 <RootLayout>
   <JsonLd slot="head" data={jsonLd} />
